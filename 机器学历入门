@@ -1,0 +1,82 @@
+## Neural Networks and Deep Learning
+http://neuralnetworksanddeeplearning.com/
+### book
+https://www.deeplearningbook.org/
+https://zh.d2l.ai/
+### blog
+https://discuss.d2l.ai/
+https://discuss.d2l.ai/t/clash/36058
+### course
+https://ocw.mit.edu/courses/6-036-introduction-to-machine-learning-fall-2020/
+https://introtodeeplearning.com/
+
+## MobileNet
+https://blog.csdn.net/qq_53144843/article/details/133420764?ops_request_misc=elastic_search_misc&request_id=551e960e53d13514524aab9420c709fd&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-133420764-null-null.142^v102^pc_search_result_base6&utm_term=mobilenet%E5%88%86%E7%B1%BB&spm=1018.2226.3001.4187
+
+https://blog.csdn.net/zskyone/article/details/160443084?ops_request_misc=elastic_search_misc&request_id=551e960e53d13514524aab9420c709fd&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-2-160443084-null-null.142^v102^pc_search_result_base6&utm_term=mobilenet%E5%88%86%E7%B1%BB&spm=1018.2226.3001.4187
+
+
+论文（原始来源）
+MobileNetV1（Depthwise Separable Convolution）
+https://arxiv.org/abs/1704.04861
+MobileNetV2（Inverted Residual + Linear Bottleneck）
+https://arxiv.org/abs/1801.04381
+MobileNetV3（NAS + SE + h-swish）
+https://arxiv.org/abs/1905.02244
+官方/权威文档与实现
+TensorFlow / Keras MobileNet 文档（包含 V1/V2/V3 的接口与用法）
+https://www.tensorflow.org/api_docs/python/tf/keras/applications
+（在该页里找 MobileNet/MobileNetV2/MobileNetV3Small/MobileNetV3Large）
+PyTorch torchvision 的 MobileNetV2/V3 文档与源码
+MobileNetV2： https://pytorch.org/vision/stable/models/generated/torchvision.models.mobilenet_v2.html
+MobileNetV3： https://pytorch.org/vision/stable/models/generated/torchvision.models.mobilenet_v3_large.html
+以及 mobilenet_v3_small
+timm（高质量第三方实现，模型非常全）
+https://github.com/huggingface/pytorch-image-models
+系列讲解/背景（便于学习）
+Depthwise Separable Convolution（V1 核心思想）
+建议配合论文阅读关键词：depthwise conv、pointwise conv、MACs/params
+Inverted Residual / Linear Bottleneck（V2 核心）
+关键词：expansion ratio、skip connection、ReLU6、linear projection
+V3（NAS + SE + activation）
+关键词：Squeeze-and-Excitation、hard-swish、NetAdapt / platform-aware NAS
+如果你告诉我你主要用 PyTorch 还是 TensorFlow，以及你是想学“原理推导”还是“上手训练/推理”，我可以按你的目标给一条最省时间的阅读顺序（从 V1 到 V3）和配套代码示例。
+
+## VGG
+1) 论文（VGG 原始出处）
+VGG 论文（Very Deep Convolutional Networks for Large-Scale Image Recognition）
+arXiv： https://arxiv.org/abs/1409.1556
+（你代码里用的 VGG19/16 就来自这篇论文的配置）
+
+1) “官网/权威实现”与文档
+PyTorch torchvision：VGG 模型文档
+
+VGG11： https://pytorch.org/vision/stable/models/generated/torchvision.models.vgg11.html
+VGG16： https://pytorch.org/vision/stable/models/generated/torchvision.models.vgg16.html
+VGG19： https://pytorch.org/vision/stable/models/generated/torchvision.models.vgg19.html
+torchvision 源码（VGG 实现）
+
+https://github.com/pytorch/vision/blob/main/torchvision/models/vgg.py
+Keras / TensorFlow：VGG16 / VGG19
+
+VGG16： https://www.tensorflow.org/api_docs/python/tf/keras/applications/VGG16
+VGG19： https://www.tensorflow.org/api_docs/python/tf/keras/applications/VGG19
+
+
+
+## PyTorch
+https://zhuanlan.zhihu.com/p/716016422
+https://blog.csdn.net/qq_45790241/article/details/141344954
+## VGG图片分类
+https://juejin.cn/post/6917523284275920910?searchId=202605071657410CCD4268D7DDE09202CA
+## VGG花分类
+https://juejin.cn/post/7178276072822145061?searchId=202605071657410CCD4268D7DDE09202CA
+https://blog.csdn.net/qq_62932195/article/details/122094111
+
+办法 B：用命令行下载示例图（如果你愿意用命令）
+Windows 自带 curl（一般都有）：
+```
+cd /d D:\files\py_learning\VGG\vggpic\shujuji\vgg_test\dummy
+curl -L -o test1.jpg https://raw.githubusercontent.com/pytorch/hub/master/images/dog.jpg
+```
+下载完 dummy 里会有 test1.jpg，直接可跑。
