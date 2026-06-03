@@ -2,9 +2,10 @@
 ## 数学符号
 \overset{\mathrm{def}}{=}
 \frac{1}{Z}\,\mathbf{K}\mathbf{P}.
+
 $$
 \overset{\mathrm{def}}{=}
-\frac{1}{Z}\,\mathbf{K}\mathbf{P}.
+\frac{1}{Z}\mathbf{K}\mathbf{P}.
 $$
 ## 一、文本格式
 ==1 标题== #
